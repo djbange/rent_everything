@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "productid": "PROD0001",
+      "address": "Monroe Apartments",
+      "zipcode": "47401",
+      "defaultimagelink": "mir1r6o",
+      "producttype": "House",
+      "amount": "900",
+      "rating": "4.0",
+      "distance": "5.2",
+      "productspecification": "INDEPENDENT"
+    },
+    {
+      "productid": "PROD0002",
+      "address": "Biddle Hotel",
+      "zipcode": "47403",
+      "defaultimagelink": "lmy09aF",
+      "producttype": "Car",
+      "amount": "1200",
+      "rating": "3.0",
+      "distance": "4.7",
+      "productspecification": "AUDI X9"
+    }
+  ]
+}

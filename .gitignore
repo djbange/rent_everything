@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+data
+.vscode
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Auto-Generated Jest MongoDB config
+globalConfig.json

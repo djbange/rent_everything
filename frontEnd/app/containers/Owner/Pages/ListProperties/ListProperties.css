@@ -1,0 +1,58 @@
+.owner {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .item {
+    background-color: rgb(241, 218, 213);
+    box-shadow: 0 0em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    display: flex;
+    border-radius: 4px;
+    padding: 2px;
+    text-align: center;  
+    margin-bottom: 10px;
+  }
+  .ullist{
+    margin-top: 25px;
+    padding-left: 15px;
+    flex-direction: row;
+    text-align: left;
+    list-style: none;
+  }
+  .list{
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 2px;
+  }
+  .more2{
+    float:right;
+  }
+  .label {
+    margin-bottom : 20px;
+    display : block;
+  }
+  
+  .buttons{
+    float: right;
+    padding :1%;
+    text-align : right;
+    color :white;
+    background-color: black;
+    box-shadow: 0em;
+    border-radius: 2px;
+    display:inline-block;
+    margin: 10px;
+  }
+  .itemlist2 {
+    width : 90%;
+    display:inline-table;
+  }
+  .sidebaralign
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+  }

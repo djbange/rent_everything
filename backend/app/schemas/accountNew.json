@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "password": {
+            "type": "string",
+            "minLength": 1
+        },
+        "auth_method": {
+            "type": "string",
+            "enum": []
+        },
+        "role": {
+            "type": "string",
+            "enum": []
+        },
+        "dob": {
+            "type": "string",
+            "format": "date"
+        },
+        "address": {
+            "type": "string"
+        },
+        "pincode": {
+            "type": "number",
+            "maxLength": 5,
+            "minLength": 5
+        },
+        "phone_number": {
+            "type": "string",
+            "pattern": "(\\+\\d{1,3}\\s?)?((\\(\\d{3}\\)\\s?)|(\\d{3})(\\s|-?))(\\d{3}(\\s|-?))(\\d{4})(\\s?(([E|e]xt[:|.|]?)|x|X)(\\s?\\d+))?"
+        }
+    },
+    "required": [
+        "name",
+        "email",
+        "password",
+        "role",
+        "dob",
+        "address",
+        "pincode",
+        "phone_number",
+        "auth_method"
+    ]
+}

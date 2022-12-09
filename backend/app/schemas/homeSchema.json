@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "category": {
+            "type": "string",
+            "enum": ["House", "Car", "Boat", "Service", "All"]
+        },
+        "zipCode": {
+            "type": "string",
+            "minLength": 1
+        },
+        "price": {
+            "type": "object"
+        },
+        "distance": {
+            "type": "number",
+            "minimum": 0
+        },
+        "rating": {
+            "type": "object"
+        },
+        "startDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "endDate": {
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "required": [
+        "zipCode"
+    ]
+}
