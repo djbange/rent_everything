@@ -4,13 +4,13 @@ services:
     build: .
     # command: pm2 ./backend/app/server.js --watch
     environment:
-      NODE_ENV: ${ENV}
+      NODE_ENV: prd
     env_file:
       - ./.env.be.dev
     # depends_on:
     #   - postgres
     ports:
-      - ${BE_PORT}:${BE_PORT}
+      - 8080:8080
     volumes:
       - .:/usr/src/app/backeEnd
       - /usr/src/app/backeEnd/node_modules
@@ -21,7 +21,7 @@ services:
     links:
       - app
     ports:
-      - ${NGINX_PORT}:${NGINX_PORT}
+      - 80:80
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - shared-volume:/usr/src/app/frontEnd

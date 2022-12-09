@@ -29,5 +29,6 @@ RUN npm install -g nodemon
 COPY . /usr/src/app/backEnd
 
 EXPOSE 8080
+EXPOSE 80
 
 CMD ["pm2-runtime", "./config/pm2.json"]
