@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16 as builder
 LABEL FALL 22 SE 2022
 
 RUN npm install pm2@latest --global --quiet
@@ -29,6 +29,9 @@ RUN npm install -g nodemon
 COPY . /usr/src/app/backEnd
 
 EXPOSE 8080
-EXPOSE 80
+
+FROM nginx:1.22-alpine as nginx
+COPY --from=builder /usr/src/app/frontEnd/build /usr/share/nginx/html 
+COPY ./config/nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 CMD ["pm2-runtime", "./config/pm2.json"]
