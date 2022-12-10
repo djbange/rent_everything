@@ -28,6 +28,25 @@ RUN npm install -g nodemon
 # Bundle app source
 COPY . /usr/src/app/backEnd
 
-EXPOSE 8080
+# EXPOSE 8080
 
-CMD ["pm2-runtime", "./config/pm2.json"]
+# Install nginx
+RUN apt-get update && apt-get install -y nginx
+
+# Remove the default nginx configuration file
+RUN rm -v /etc/nginx/nginx.conf
+
+# Copy the modified nginx configuration file
+COPY ./config/nginx/nginx.conf /etc/nginx/
+
+# Copy the frontend build files to the default nginx public directory
+# COPY /usr/src/app/frontEnd/build /var/www/html/
+
+# Expose port 8080 and 80
+EXPOSE 80
+
+# Start nginx and pm2
+# CMD ["pm2-runtime", "./config/pm2.json"]
+# CMD ["nginx", "-g", "daemon off;"]
+
+CMD ["pm2-runtime", "./config/pm2.json", "&", "nginx", "-g", "daemon off;"]
